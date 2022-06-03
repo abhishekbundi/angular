@@ -1,6 +1,7 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -9,8 +10,6 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +18,17 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     HomeComponent,
     ContactComponent,
     AboutComponent,
-    GalleryComponent,
-    PagenotfoundComponent
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+    {path: '', component: HomeComponent},
+    {path: 'contact', component: ContactComponent},
+    {path: 'about', component: AboutComponent},
+    {path: 'galley', component: GalleryComponent}
+  ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
