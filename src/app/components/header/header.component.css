@@ -1,0 +1,3 @@
+.navbar {background: #009688;}
+.navbar a {color: #ffffff;font-size: 18px;font-weight: 500;}
+.nav>li>a:focus, .nav>li>a:hover {background-color: #009688;color: #ffe41d;}
