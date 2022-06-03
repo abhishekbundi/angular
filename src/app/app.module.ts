@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+     HttpClientModule,
     RouterModule.forRoot([
     {path: '', component: HomeComponent},
     {path: 'contact', component: ContactComponent},
